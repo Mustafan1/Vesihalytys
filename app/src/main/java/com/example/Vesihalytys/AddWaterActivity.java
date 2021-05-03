@@ -19,6 +19,7 @@ public class AddWaterActivity extends AppCompatActivity {
     private Button Addto;
     private Button plussa;
     private Button miinus;
+
     private TextView amount;
 
 
