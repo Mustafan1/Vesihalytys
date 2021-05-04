@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Vesihalytys</string>
+
+    <string-array name="notification_interval_array">
+        <item>30</item>
+        <item>60</item>
+        <item>90</item>
+        <item>120</item>
+    </string-array>
+
+    <string-array name="unit_array">
+        <item>litra</item>
+        <item>unssi</item>
+    </string-array>
+
 </resources>

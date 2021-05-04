@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -59,10 +60,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        settin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SettingsActivity();
+            }
+        });
     }
 
     public void AddWaterActivity(){
         Intent intent = new Intent(this, AddWaterActivity.class);
+        startActivity(intent);
+    }
+
+    public void SettingsActivity(){
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 
