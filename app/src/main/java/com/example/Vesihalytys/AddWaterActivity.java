@@ -19,24 +19,19 @@ public class AddWaterActivity extends AppCompatActivity {
     private Button Addto;
     private Button plussa;
     private Button miinus;
-
-    private TextView amount;
-
-
-
-
+    private TextView maara;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_water);
-        amount = (TextView) findViewById(R.id.arvo_2);
+        maara = (TextView) findViewById(R.id.arvo_2);
         Addto = (Button) findViewById(R.id.add);
         plussa = (Button) findViewById(R.id.plus);
         miinus = (Button) findViewById(R.id.minus);
         progressAmount = (ProgressBar)findViewById(R.id.progressBar2);
 
-
-
+        Intent intent = getIntent();
+        final int val = intent.getIntExtra("value", 0);
 
         plussa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -57,15 +52,35 @@ public class AddWaterActivity extends AppCompatActivity {
         });
 
         Addto.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Intent  intent = new Intent(AddWaterActivity.this, MainActivity.class);
-                startActivity(intent);
+                int a = val + addDrink;
+                Intent b= new Intent();
+                b.putExtra("a", a);
+                setResult(RESULT_OK, b);
+                finish();
+
             }
         });
+
+
     }
 
+   /* private void addWaterClicked() {
+        int number1 = Integer.parseInt(maara.getText().toString());
+        int number2 = Integer.parseInt(progressAmount.toString());
+        Intent  intent = new Intent(AddWaterActivity.this, MainActivity.class);
+        intent.putExtra("value", number1);
+        intent.putExtra("progress", number2);
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+*/
     public void updateWater(){
         progressAmount.setProgress(addDrink);
-        amount.setText(addDrink+"ML");
+        maara.setText(addDrink+"ML");
     }
+
+
+
 }
