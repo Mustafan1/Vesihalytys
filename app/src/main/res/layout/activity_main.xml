@@ -24,14 +24,7 @@
             app:backgroundTint="#FFFFFF"
             tools:ignore="RtlCompat" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="150dp"
-            android:layout_height="53dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            tools:text="Tänään"
-            android:layout_marginRight="5dp"/>
+
     <Button
         android:id="@+id/setting"
         android:layout_width="66dp"

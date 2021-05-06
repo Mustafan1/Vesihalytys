@@ -18,6 +18,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @author Sami
+ */
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override

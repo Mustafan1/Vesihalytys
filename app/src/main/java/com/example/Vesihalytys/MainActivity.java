@@ -1,13 +1,13 @@
 package com.example.Vesihalytys;
-/***
+/**
  * Main application page.
- *
- *
+ * @author Mustafa,
+ * @version 0.1
+ *Vesihälytys reminds users to drink water
  *
  */
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -33,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.arvo);
         add_progressbar = (ProgressBar)findViewById(R.id.progress_bar);
-
+        /**
+         *@yksilassi Button is used to add a regular glass of water which is 240 ml.
+         *
+         */
         yksilassi = findViewById(R.id.one_glass);
         yksilassi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,13 +47,20 @@ public class MainActivity extends AppCompatActivity {
                     updateInfo();
                 }
             }
+            /**
+             *@updateInfo interface method is used to update the interface of the application.
+             * add_progressbar adds the amount of water in progress bar.
+             * textView shows the amount of water in number ml.
+             */
             private void updateInfo() {
                 add_progressbar.setProgress(amount);
                 textView.setText(amount+"ML");
             }
         });
 
-
+        /**
+         *@addWater Button is used to add water manually using a link from MainActivity to AddWaterActivity.
+         */
         addWater = findViewById(R.id.add_water);
         addWater.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        /**
+         *@setting Button is used to set settings to the application using linking  MainActivity to SettingActivity.
+         */
         settin = findViewById(R.id.setting);
         settin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         *@Hisotry Button is set settings to the application using using a link from MainActivity to SettingActivity.
+         */
         history = findViewById(R.id.history);
         history.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,24 +94,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    /**
+     *intent for AddWaterActivty page
+     */
     public void AddWaterActivity(){
         Intent intent = new Intent(this, AddWaterActivity.class);
         startActivity(intent);
     }
 
+
     public void SettingsActivity(){
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
-
+    /**
+     *intent for History page
+     */
     private void History() {
         Intent intent = new Intent(this, History.class);
         startActivity(intent);
     }
-
-
-
 
 
 

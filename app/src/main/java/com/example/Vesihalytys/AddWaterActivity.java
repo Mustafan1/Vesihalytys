@@ -1,5 +1,5 @@
 package com.example.Vesihalytys;
-/***
+/**
  * AddWaterActivity
  * The user can add water manually.
  */
@@ -32,7 +32,9 @@ public class AddWaterActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final int val = intent.getIntExtra("value", 0);
-
+        /**
+         * @plussa button increase the amount water  (ml)
+         */
         plussa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 progressAmount.setMax(1200);
@@ -42,6 +44,10 @@ public class AddWaterActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * @miinus button decrease the amount of water  (ml)
+         */
         miinus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (addDrink >=20){
@@ -50,7 +56,9 @@ public class AddWaterActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * @Addto button is used to send back the amount of added water to MainActivity
+         */
         Addto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +84,11 @@ public class AddWaterActivity extends AppCompatActivity {
         finish();
     }
 */
+
+    /**
+     *@updateWater interface method is used to display the amount of water in progress bar and also in textview
+     *
+     */
     public void updateWater(){
         progressAmount.setProgress(addDrink);
         maara.setText(addDrink+"ML");
