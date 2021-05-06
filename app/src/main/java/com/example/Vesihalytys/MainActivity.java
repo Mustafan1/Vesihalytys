@@ -31,27 +31,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-             textView = findViewById(R.id.arvo);
-             add_progressbar = (ProgressBar)findViewById(R.id.progress_bar);
-             addWater = findViewById(R.id.add_water);
-             yksilassi = findViewById(R.id.one_glass);
-             settin = findViewById(R.id.setting);
-             history = findViewById(R.id.history);
+        textView = findViewById(R.id.arvo);
+        add_progressbar = (ProgressBar)findViewById(R.id.progress_bar);
+        addWater = findViewById(R.id.add_water);
+        yksilassi = findViewById(R.id.one_glass);
+        settin = findViewById(R.id.setting);
+        history = findViewById(R.id.history);
 
-             yksilassi.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        add_progressbar.setMax(2700);
-                        if (amount <=2700){
-                            amount +=240;
-                            updateInfo();
-                        }
-                    }
-                    private void updateInfo() {
-                        add_progressbar.setProgress(amount);
-                        textView.setText(amount+"ML");
-                    }
-                });
+        yksilassi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                add_progressbar.setMax(2700);
+                if (amount <=2700){
+                    amount +=240;
+                    updateInfo();
+                }
+            }
+            private void updateInfo() {
+                add_progressbar.setProgress(amount);
+                textView.setText(amount+"ML");
+            }
+        });
 
         addWater.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 SettingsActivity();
             }
         });
+
     }
 
     public void AddWaterActivity(){
@@ -78,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+
+
+
+
+
 
 
 
