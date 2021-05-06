@@ -22,7 +22,7 @@ public class History extends AppCompatActivity {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String date = "Valintasi "+ dayOfMonth +"." + (month+1) +"." +year;
+                String date = dayOfMonth +"." + (month+1) +"." +year;
                 viewDate.setText(date);
             }
         });
