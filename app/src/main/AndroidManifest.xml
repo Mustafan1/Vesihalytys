@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cercle">
         <activity android:name="com.example.Vesihalytys.AddWaterActivity"></activity>
+        <activity android:name="com.example.Vesihalytys.SettingsActivity"></activity>
         <activity android:name="com.example.Vesihalytys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
