@@ -1,1 +1,3 @@
-This project is based on building a mobile application, which would be giving an alarm for the user to remind them to drink water.
+An alarm system
+The users can set reminders to get an alarm so that they can drink water.
+
